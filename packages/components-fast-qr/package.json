@@ -1,0 +1,23 @@
+{
+  "name": "@react-form-builder/components-fast-qr",
+  "version": "3.0.2",
+  "private": false,
+  "main": "./dist/index.js",
+  "type": "module",
+  "description": "OptimaJet Form Builder Components - Fast QR",
+  "license": "Contact sales@optimajet.com",
+  "bugs": {
+    "email": "support@optimajet.com"
+  },
+  "dependencies": {
+    "@react-form-builder/core": "^3.0.2",
+    "fast_qr": "^0.12.5",
+    "react": ">=17.0.2 || ^18 || ^19"
+  },
+  "files": [
+    "dist/*",
+    "README.md"
+  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts"
+}

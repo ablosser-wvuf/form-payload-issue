@@ -1,0 +1,42 @@
+{
+  "name": "@react-form-builder/designer-bundle",
+  "version": "3.0.2",
+  "private": false,
+  "main": "./dist/index.umd.js",
+  "type": "module",
+  "description": "Optimajet Formengine. Develop front-end drag and drop forms with ease. User-friendly interface reduce the learning curve for your team.",
+  "keywords": [
+    "form-builder",
+    "optimajet"
+  ],
+  "author": "Optimajet",
+  "license": "Contact sales@optimajet.com",
+  "bugs": {
+    "email": "support@optimajet.com"
+  },
+  "dependencies": {
+    "@react-form-builder/components-rsuite": "^3.0.2",
+    "@react-form-builder/core": "^3.0.2",
+    "@react-form-builder/designer": "^3.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "dist/index.iife.js",
+    "dist/index.umd.js",
+    "README.md"
+  ]
+}

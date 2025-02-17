@@ -1,0 +1,671 @@
+const e = {
+  addMarkerOnSearch: {
+    hint: "是否在搜索时添加标记。"
+  },
+  allowChangingMarkers: {
+    hint: "如果选中，用户可以更改标记。"
+  },
+  allowMultipleMarkers: {
+    hint: "多个标记"
+  },
+  apiKey: {
+    hint: "谷歌地图API密钥。 保存表单并刷新页面以应用更改。",
+    name: "API密钥"
+  },
+  collisionBehavior: {
+    hint: "的标记碰撞行为。"
+  },
+  colorScheme: {
+    hint: "要使用的配色方案。"
+  },
+  gestureHandling: {
+    hint: "要使用的手势处理。"
+  },
+  language: {
+    hint: "要使用的语言。"
+  },
+  latitude: {
+    hint: "中心点的纬度"
+  },
+  longitude: {
+    hint: "中心点的经度"
+  },
+  mapControlPosition: {
+    hint: "地图控件的位置。"
+  },
+  mapId: {
+    hint: "地图ID是与特定地图样式或要素关联的标识符。",
+    name: "地图ID"
+  },
+  mapTypeId: {
+    hint: "要使用的默认映射类型。",
+    name: "地图类型"
+  },
+  markerWindowTitle: {
+    hint: "标记窗口的标题。",
+    name: "标记窗口标题"
+  },
+  markers: {
+    hint: "标记的坐标"
+  },
+  region: {
+    hint: "要使用的区域代码。"
+  },
+  removeMarkerCaption: {
+    hint: "标记移除按钮上的标题。",
+    name: "删除标记标题"
+  },
+  searchPlaceholder: {
+    hint: "地图搜索输入的占位符文本。",
+    name: "搜索占位符"
+  },
+  showMapControl: {
+    hint: "是否显示地图控件。"
+  },
+  zoom: {
+    hint: "缩放级别"
+  }
+}, t = {
+  modules: {
+    hint: "允许自定义编辑器的行为和功能。 阅读文档以获取更多信息。",
+    name: "模块"
+  },
+  toolbarOptions: {
+    hint: "要显示在工具栏上的按钮组",
+    name: "工具栏选项"
+  }
+}, n = {
+  format: {
+    hint: "在输入中呈现日期的格式",
+    name: "格式"
+  }
+}, a = {
+  format: {
+    hint: "在输入中呈现的时间格式",
+    name: "格式"
+  }
+}, o = {
+  activeIndex: {
+    hint: "活动步骤索引",
+    name: "活动索引"
+  },
+  finishButtonLabel: {
+    hint: "完成按钮标签",
+    name: "完成按钮标签"
+  },
+  nextButtonLabel: {
+    hint: "下一个按钮标签",
+    name: "下一个按钮标签"
+  },
+  prevButtonLabel: {
+    hint: "上一个按钮标签",
+    name: "上一个按钮标签"
+  },
+  showSteps: {
+    hint: "如果为true，将显示步骤",
+    name: "显示步骤"
+  },
+  showStepsLabels: {
+    hint: "如果为true，将显示步骤标签",
+    name: "显示步骤标签"
+  },
+  steps: {
+    hint: "向导步骤",
+    name: "步骤"
+  },
+  stepsNavigation: {
+    hint: "通过单击确定可用于导航的步骤",
+    name: "步骤导航"
+  },
+  validateOnFinish: {
+    hint: "如果为true，则在完成向导之前将验证向导",
+    name: "完成后验证"
+  },
+  validateOnNext: {
+    hint: "如果为true，则在转到下一步之前将验证该步骤",
+    name: "下次验证"
+  },
+  verticalSteps: {
+    hint: "如果为true，步骤将垂直显示",
+    name: "垂直台阶"
+  },
+  wizardHasNoSteps: '要添加向导步骤，请选择组件并在"属性"面板中添加步骤。'
+}, i = {
+  add: "添加",
+  addAction: "添加操作",
+  addCodeAction: "添加代码操作",
+  arguments: "争论",
+  code: "代码",
+  common: "普通",
+  custom: "海关规定",
+  delete: "删除",
+  duplicate: "复制",
+  edit: "编辑",
+  name: "姓名",
+  parameters: "参数",
+  type: "类型"
+}, r = {
+  accept: {
+    hint: "可以接受的文件类型。 请参阅标准HTML属性：接受",
+    name: "接受"
+  },
+  action: {
+    hint: "上传URL",
+    name: "开始！"
+  },
+  allowEmptyFormatting: {
+    hint: '默认情况下，当值为空（null、未定义或"）时，PatternFormat组件不应用格式',
+    name: "允许空格式 "
+  },
+  allowLeadingZeros: {
+    hint: "这允许启用或禁用输入字段中的前导零。 默认情况下，在输入模糊时，前导零将被删除",
+    name: "允许前导零"
+  },
+  allowNegative: {
+    hint: "如果设置为false，则不允许使用负数",
+    name: "允许否定"
+  },
+  allowedDecimalSeparators: {
+    hint: "按下时产生小数点分隔符的字符。 缺失时，小数点分隔符和'。'被使用",
+    name: "允许的小数分隔符"
+  },
+  appearance: {
+    hint: "设置选择器外观",
+    name: "外观"
+  },
+  autoUpload: {
+    hint: "选择文件后自动上传",
+    name: "自动上传"
+  },
+  block: {
+    hint: "阻塞整行",
+    name: "座"
+  },
+  bodyFill: {
+    hint: "填充容器的内容区域",
+    name: "身体填充"
+  },
+  calendarDefaultDate: {
+    hint: "日历面板默认演示日期和时间",
+    name: "日历默认日期"
+  },
+  checked: {
+    hint: "是否检查值",
+    name: "检查过"
+  },
+  checkedChildren: {
+    hint: "在选中状态下显示的文本",
+    name: "检查文本"
+  },
+  cleanable: {
+    hint: "选项是否可以清空",
+    name: "可清洁"
+  },
+  code: {
+    hint: "编辑代码",
+    name: "密码"
+  },
+  color: {
+    hint: "组件的主色",
+    name: "颜色"
+  },
+  creatable: {
+    hint: "设置可以创建新选项",
+    name: "可创造的"
+  },
+  data: {
+    hint: "可选择的数据",
+    name: "数据资料"
+  },
+  decimalScale: {
+    hint: "如果定义，它会限制小数点后的位数",
+    name: "十进制刻度"
+  },
+  decimalSeparator: {
+    hint: "定义十进制字符",
+    name: "小数分隔符"
+  },
+  defaultOpen: {
+    hint: "Open属性的默认值",
+    name: "默认打开"
+  },
+  defaultValue: {
+    hint: "默认值",
+    name: "默认值"
+  },
+  disableMultipart: {
+    hint: "如果'true'，则禁用使用多部分表单进行文件上传，而是流式传输文件。 某些Api（例如Amazon S3）可能期望将文件流式传输，而不是通过表单发送",
+    name: "禁用多部分"
+  },
+  disabled: {
+    hint: "组件是否被禁用",
+    name: "残疾人士"
+  },
+  download: {
+    hint: "导致浏览器将链接的URL视为下载",
+    name: "下载"
+  },
+  downloadFilename: {
+    hint: "定义一个值建议它作为文件名。 /和\\字符转换为下划线(_)",
+    name: "下载文件名"
+  },
+  draggable: {
+    hint: "启用拖放以上载",
+    name: "可拖动"
+  },
+  editable: {
+    hint: "呈现为输入，该值可以通过键盘输入",
+    name: "可编辑"
+  },
+  errorConfig: {
+    show: "展览"
+  },
+  eventKey: {
+    hint: "此元素对应的事件键",
+    name: "活动键"
+  },
+  fixedDecimalScale: {
+    hint: "如果设置为true，它会在decimalSeparator之后添加尾随0以匹配给定的decimalScale",
+    name: "固定小数位数"
+  },
+  flexDirection: {
+    hint: "容器子项的弯曲方向",
+    name: "方向感"
+  },
+  format: {
+    hint: "使用#（或模式char）字符格式化模式。 #是数字的占位符字符。 例如：'######'",
+    name: "格式"
+  },
+  groupBy: {
+    hint: '在"数据"中设置分组条件"键"',
+    name: "组别"
+  },
+  href: {
+    hint: "超链接指向的URL",
+    name: "Href"
+  },
+  htmlAttributes: {
+    hint: "React(camelCase)格式的HTML属性",
+    name: "HTML属性"
+  },
+  isoWeek: {
+    hint: "ISO8601标准，每个日历周从第七天的周一和周日开始",
+    name: "Iso周"
+  },
+  justifyContent: {
+    name: "对齐方式"
+  },
+  label: {
+    hint: "设置标签",
+    name: "标签"
+  },
+  limitEndYear: {
+    hint: "设置可用年份相对于当前选择日期的上限",
+    name: "年底限额"
+  },
+  limitStartYear: {
+    hint: "设置可用年份相对于当前选择日期的下限",
+    name: "限制开始年份"
+  },
+  loading: {
+    hint: "组件是否处于加载状态",
+    name: "装载量"
+  },
+  mask: {
+    hint: "用作数字位置的掩码字符，直到为该位置提供任何数字字符为止",
+    name: "面具"
+  },
+  method: {
+    hint: "上传请求的HTTP方法",
+    name: "方法"
+  },
+  name: {
+    hint: "上传对应文件的参数名",
+    name: "姓名"
+  },
+  objectFit: {
+    name: "适合"
+  },
+  objectPosition: {
+    name: "职位"
+  },
+  oneTap: {
+    hint: "一键完成选择值",
+    name: "一个水龙头"
+  },
+  open: {
+    hint: "是否打开组件",
+    name: "打开"
+  },
+  passwordMask: {
+    hint: "使用密码掩码",
+    name: "密码掩码"
+  },
+  patternChar: {
+    hint: "这有助于定义格式模式字符",
+    name: "模式char"
+  },
+  placeholder: {
+    hint: "设置占位符",
+    name: "占位符"
+  },
+  placement: {
+    hint: "组件的放置",
+    name: "就业情况"
+  },
+  prefix: {
+    hint: "在输入值之前添加前缀字符",
+    name: "前缀"
+  },
+  preload: {
+    hint: "在打开下拉列表之前，提前上传数据",
+    name: "预紧力"
+  },
+  preventOverflow: {
+    hint: "防止浮动元素溢出",
+    name: "防止溢出"
+  },
+  readOnly: {
+    hint: "如果为true，则该组件将为只读",
+    name: "只读"
+  },
+  showMeridian: {
+    hint: "以12格式显示小时数",
+    name: "显示子午线"
+  },
+  showWeekNumbers: {
+    hint: "是否显示周数",
+    name: "显示周数"
+  },
+  size: {
+    hint: "组件可以有不同的尺寸",
+    name: "大小"
+  },
+  suffix: {
+    hint: "在输入值后添加后缀",
+    name: "后缀 "
+  },
+  target: {
+    hint: "在哪里显示链接的URL，作为浏览上下文（选项卡、窗口或<iframe>）的名称",
+    name: "目标"
+  },
+  textAlign: {
+    name: "对齐方式"
+  },
+  thousandsGroupStyle: {
+    hint: "千式(千):123,456,789,印度式(万):12,34,56,789,中国式(万):1,2345,6789",
+    name: "千人团体风格"
+  },
+  tooltipProps: {
+    hint: "为此元素使用工具提示",
+    tooltip: "工具提示"
+  },
+  unCheckedChildren: {
+    hint: "在未选中状态下显示的文本",
+    name: "未选中的文本"
+  },
+  value: {
+    hint: "值（受控）",
+    name: "价值"
+  },
+  withCredentials: {
+    hint: "上传请求时是否携带cookie",
+    name: "有证件"
+  }
+}, m = {
+  editCodeAction: "编辑代码操作",
+  editProperty: "编辑属性",
+  function: "可计算价值",
+  localization: "流利的本地化",
+  simpleValue: "简单值",
+  simpleValueHint: "在右侧面板中编辑属性",
+  use: "使用方法"
+}, l = {
+  actionNameExists: "具有此名称的操作已存在",
+  nameIsRequired: "需要操作名称",
+  parameterNameExists: "具有此名称的参数已存在",
+  parameterNameIsNotValid: "参数名称无效",
+  parameterNameIsRequired: "参数名称为必填项"
+}, s = {
+  codeActionHeader: "代码动作编辑器",
+  codePlaceholder: "//在这里输入你的代码",
+  compilationResult: "编译结果:",
+  compile: "编译",
+  generic: {
+    json: {
+      title: "编辑JSON数据"
+    }
+  },
+  ok: "好的"
+}, c = {
+  apply: "申请",
+  cancel: "取消",
+  clone: "克隆",
+  close: "接近/接近",
+  edit: "编辑",
+  name: "姓名",
+  remove: "移走",
+  save: "储蓄",
+  test: "测试"
+}, h = {
+  add: "添加新元素",
+  after: "之后",
+  before: "以前",
+  inside: "里面"
+}, d = {
+  categories: {
+    fields: "字段",
+    static: "静态",
+    structure: "结构",
+    templates: "模板"
+  }
+}, p = {
+  clickToAdd: "点击添加控件"
+}, u = "编辑JSON", g = {
+  data: "数据资料",
+  errors: "错误"
+}, f = {
+  addNewForm: "添加新表单",
+  formWithNameExists: "具有此名称的表单已经存在。",
+  noFormsInFormStorage: "保存表单，使其显示在表单列表中。"
+}, b = {
+  clear: "清楚",
+  currentFormName: "当前表单的名称",
+  download: "下载",
+  enterFormName: "请输入表格名称",
+  exportForms: "出口表格",
+  exportFormsError: "导出表单失败！ 查看浏览器控制台中的日志",
+  exportFormsSuccess: "导出的表单",
+  formNamePlaceholder: "我美丽的形式",
+  formSaveError: "未能保存表格！ 查看浏览器控制台中的日志",
+  formSaved: "表格已保存",
+  importForms: "进口表格",
+  importFormsError: "导入表单失败! 查看浏览器控制台中的日志",
+  importFormsSuccess: "输入的表格",
+  menu: "菜单",
+  print: "印刷业",
+  save: "储蓄",
+  saveAs: "省省吧。..",
+  settings: "设置",
+  translation: "翻译",
+  undo: "撤消",
+  upload: "上载",
+  validateForm: "验证表格"
+}, k = {
+  formSettings: {
+    actions: "行动",
+    error: "错误设置",
+    language: "语言设定",
+    tooltip: "工具提示"
+  },
+  sectionName: {
+    components: "组件",
+    forms: "表格",
+    settings: "设置",
+    tree: "树"
+  }
+}, w = {
+  messageIsNull: "本地化消息为null",
+  messageNotFound: "找不到本地化消息"
+}, F = {
+  cancel: "取消",
+  ok: "好的"
+}, v = {
+  applyKey: "应用关键更改",
+  codeButton: {
+    editCalculable: "编辑可计算",
+    editLocalizable: "编辑流利的本地化",
+    hintCalculable: "使此属性可计算",
+    hintCalculableAndLocalizable: "使用Fluent使此属性可计算或本地化",
+    hintLocalizable: "使用Fluent本地化此属性",
+    neitherCalculableNorLocalizable: "既不可计算也不可本地化"
+  },
+  keyMustBeUnique: "密钥必须是唯一的",
+  keyMustNotBeEmpty: "密钥不能为空",
+  sectionName: {
+    actions: "行动",
+    expression: "表达方式",
+    linkedProperty: "链接属性",
+    main: "主要",
+    rules: "规则",
+    style: "风格",
+    withTarget: "带目标",
+    withoutTarget: "没有目标"
+  },
+  selectElementForEdit: "为编辑属性选择表单上的元素",
+  setInputHint: "按Enter键添加值",
+  subSection: {
+    additionalProperties: "其他属性"
+  }
+}, y = {
+  modes: {
+    builder: "预览",
+    desktop: "桌面版",
+    mobile: "流动电话",
+    tablet: "平板电脑",
+    viewer: "编辑"
+  },
+  toggleTheme: "切换主题"
+}, E = {
+  search: "搜索。.."
+}, N = {
+  any: "任何",
+  component: "组件",
+  componentHint: "适用于组件的样式",
+  desktop: "桌面版",
+  forDevice: "用于设备:",
+  mobile: "流动电话",
+  other: "其他",
+  tablet: "平板电脑",
+  wrapper: "包装器,包装器",
+  wrapperHint: "适用于组件包装器的样式"
+}, S = {
+  autorun: "自动运行",
+  compilationOk: "编译结果：OK",
+  hasNotReturnedValue: "没有返回值",
+  run: "跑",
+  testFormData: "测试表格数据"
+}, C = {
+  cloneComponent: "克隆组件",
+  elements: "元素",
+  notFound: "未找到",
+  removeComponent: "移除组件",
+  reset: "重置"
+}, P = {
+  collapse: "全部崩溃",
+  expand: "全部展开"
+}, M = {
+  addRule: "添加规则",
+  chooseValidation: "选择你的类型",
+  editCustomValidationCode: "编辑组件的自定义验证代码",
+  formErrors: "表单错误",
+  rule: {
+    code: "代码",
+    custom: "海关规定",
+    datetime: "日期时间",
+    email: "电邮",
+    endsWith: "以",
+    falsy: "法尔西",
+    finite: "有限的",
+    includes: "包括",
+    integer: "整数",
+    ip: "知识产权",
+    length: "长度",
+    lessThan: "小于",
+    max: "麦克斯",
+    min: "敏",
+    moreThan: "超过",
+    multipleOf: "的倍数",
+    nonEmpty: "非空",
+    regex: "正则表达式",
+    required: "需要",
+    startsWith: "开始于",
+    truthy: "真实的，真实的",
+    url: "网址",
+    uuid: "Uuid"
+  },
+  showFormErrors: "显示表单错误"
+}, x = {
+  GoogleMap: e,
+  RichTextEditor: t,
+  RsDatePicker: n,
+  RsTimePicker: a,
+  RsWizard: o,
+  actions: i,
+  annotation: r,
+  bottomPanel: m,
+  codeActionEditor: l,
+  codeEditor: s,
+  common: c,
+  componentToolbar: h,
+  componentsList: d,
+  componentsModal: p,
+  editJson: u,
+  errorsPanel: g,
+  formsList: f,
+  leftMenu: b,
+  leftPanel: k,
+  localization: w,
+  promptDialog: F,
+  propertiesEditor: v,
+  rightMenu: y,
+  searchForm: E,
+  style: N,
+  testingEditor: S,
+  toolbar: C,
+  tree: P,
+  validation: M
+};
+export {
+  e as GoogleMap,
+  t as RichTextEditor,
+  n as RsDatePicker,
+  a as RsTimePicker,
+  o as RsWizard,
+  i as actions,
+  r as annotation,
+  m as bottomPanel,
+  l as codeActionEditor,
+  s as codeEditor,
+  c as common,
+  h as componentToolbar,
+  d as componentsList,
+  p as componentsModal,
+  x as default,
+  u as editJson,
+  g as errorsPanel,
+  f as formsList,
+  b as leftMenu,
+  k as leftPanel,
+  w as localization,
+  F as promptDialog,
+  v as propertiesEditor,
+  y as rightMenu,
+  E as searchForm,
+  N as style,
+  S as testingEditor,
+  C as toolbar,
+  P as tree,
+  M as validation
+};
+//# sourceMappingURL=zh-CN-097d0028.js.map

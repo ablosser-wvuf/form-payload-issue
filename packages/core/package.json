@@ -1,0 +1,69 @@
+{
+  "name": "@react-form-builder/core",
+  "version": "3.0.2",
+  "private": false,
+  "main": "./dist/index.js",
+  "type": "module",
+  "description": "Optimajet Drag & Drop Form Builder Library for React. Simple way to implement drag and drop form functionality in your React applications.",
+  "keywords": [
+    "react",
+    "form",
+    "forms",
+    "form-validation",
+    "validation",
+    "formengine",
+    "form-library",
+    "react-component",
+    "react-dom",
+    "hooks",
+    "render props",
+    "validation",
+    "react-component",
+    "schema",
+    "form-builder",
+    "optimajet"
+  ],
+  "author": "Optimajet",
+  "license": "Contact sales@optimajet.com",
+  "bugs": {
+    "email": "support@optimajet.com"
+  },
+  "dependencies": {
+    "@fluent/bundle": "^0.18.0",
+    "lodash-es": "^4.17.21",
+    "zod": "^3.22.4"
+  },
+  "peerDependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/css": "^11.13.5",
+    "@emotion/react": "^11.14.0",
+    "mobx": "^6.13.5",
+    "mobx-react": "^9.2.0",
+    "react": ">=17.0.2 || ^18 || ^19",
+    "rxjs": "^7.8.0",
+    "stylis-plugin-rtl": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "dist/index.js.map",
+    "dist/index.js",
+    "dist/index.d.ts",
+    "README.md"
+  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@react-form-builder/viewer-bundle",
+  "version": "3.0.2",
+  "private": false,
+  "main": "./dist/index.umd.js",
+  "type": "module",
+  "description": "Optimajet Form Builder Develop front-end drag n drop forms with ease.",
+  "keywords": [
+    "form-builder",
+    "optimajet"
+  ],
+  "author": "Optimajet",
+  "license": "Contact sales@optimajet.com",
+  "bugs": {
+    "email": "support@optimajet.com"
+  },
+  "dependencies": {
+    "@react-form-builder/components-rsuite": "file:packages/components-rsuite",
+    "@react-form-builder/core": "file:packages/core",
+    "@react-form-builder/components-fast-qr": "file:packages/components-fast-qr",
+    "@react-form-builder/components-google-map": "file:packages/components-google-map",
+    "@react-form-builder/components-rich-text": "file:packages/components-rich-text",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "dist/index.iife.js",
+    "dist/index.umd.js",
+    "dist/formengine-rsuite.css",
+    "dist/rsuite-no-reset.min.css",
+    "dist/rsuite-no-reset-rtl.min.css",
+    "README.md"
+  ]
+}

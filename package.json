@@ -15,16 +15,32 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
+    "@emotion/css": "11.10.5",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
     "@payloadcms/db-mongodb": "latest",
     "@payloadcms/next": "latest",
     "@payloadcms/payload-cloud": "latest",
     "@payloadcms/richtext-lexical": "latest",
+    "@payloadcms/ui": "^3.23.0",
+    "@react-form-builder/components-rsuite": "file:packages/components-rsuite",
+    "@react-form-builder/core": "file:packages/core",
+    "@react-form-builder/components-fast-qr": "file:packages/components-fast-qr",
+    "@react-form-builder/components-google-map": "file:packages/components-google-map",
+    "@react-form-builder/components-rich-text": "file:packages/components-rich-text",
+    "@react-form-builder/designer": "file:packages/designer",
+    "@react-form-builder/designer-bundle": "file:packages/designer-bundle",
+    "@tanstack/react-query": "^5.66.0",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
+    "lucide-react": "^0.475.0",
+    "mobx": "6.9.0",
     "next": "15.1.5",
     "payload": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "rsuite": "5.59.1",
+    "rsuite-table": "5.10.3",
     "sharp": "0.32.6"
   },
   "devDependencies": {
@@ -45,5 +61,6 @@
     "onlyBuiltDependencies": [
       "sharp"
     ]
-  }
+  },
+  "packageManager": "pnpm@9.15.5+sha1.cb1f6372ef64e2ba352f2f46325adead1c99ff8f"
 }
